@@ -1,0 +1,24 @@
+{
+  "name": "generator-coding",
+  "version": "1.0.0",
+  "description": "generator-coding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "nowcoder",
+    "I/O",
+    "acmcoder",
+    "coding"
+  ],
+  "author": "healy.lxp",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "del": "^3.0.0",
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^2.0.2"
+  }
+}

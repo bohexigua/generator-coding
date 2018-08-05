@@ -1,0 +1,22 @@
+{
+  "name": "nowcoder-acmcoder-coding",
+  "version": "1.0.0",
+  "description": "nowcoder/acmcoder javascript I/O",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel lib --out-dir dist && babel-node index.js"
+  },
+  "keywords": [
+    "javascript",
+    "nowcoder",
+    "I/O",
+    "acmcoder",
+    "coding"
+  ],
+  "author": "lxp.healy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
