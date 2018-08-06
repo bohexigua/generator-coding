@@ -1,6 +1,6 @@
 {
   "name": "generator-coding",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "generator-coding",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   ],
   "author": "healy.lxp",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^2.4.1",
     "del": "^3.0.0",
     "yeoman-generator": "^0.24.1",
