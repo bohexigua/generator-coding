@@ -43,14 +43,13 @@ module.exports = generators.Base.extend({
   },
 
   writing: function() {
-    this.fs.copyTpl(
-      this.templatePath('./'),
-      this.destinationPath(`./${ this.dirname }/`)
-    );
-    this.fs.copyTpl(
-      this.templatePath('./.babelrc'),
-      this.destinationPath(`./${ this.dirname }/.babelrc`)
-    );
+    const copyPaths = ['', '.babelrc'];
+    copyPaths.map((path, index) => {
+      this.fs.copyTpl(
+        this.templatePath(`./${ path }`),
+        this.destinationPath(`./${ this.dirname }/${ path }`)
+      );
+    });
   },
 
   end: function() {
