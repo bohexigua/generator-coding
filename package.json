@@ -1,6 +1,6 @@
 {
   "name": "generator-coding",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "generator-coding",
   "main": "index.js",
   "scripts": {

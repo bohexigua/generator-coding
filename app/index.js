@@ -47,6 +47,10 @@ module.exports = generators.Base.extend({
       this.templatePath('./'),
       this.destinationPath(`./${ this.dirname }/`)
     );
+    this.fs.copyTpl(
+      this.templatePath('./.babelrc'),
+      this.destinationPath(`./${ this.dirname }/.babelrc`)
+    );
   },
 
   end: function() {
