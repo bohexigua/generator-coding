@@ -9,18 +9,39 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-const readWrap = () => {
+const checkout = (arr) => {
+  var index = arr.indexOf('');
+      if(index > -1){
+        arr.splice(index,1);
+        checkout(arr)
+      }
+        return arr;
+}
+
+const readWrap = (max,type) => {
   return new Promise((resolve, reject) => {
     rl.on('line', (input) => {
-      resolve(input);
+      if(typeof max == 'undefined'){
+        resolve(input);
+      }else{
+        var inputData = input.split(' ');
+        inputData = checkout(inputData);
+        if(inputData.length == max){
+          var result = typeof type == 'undefined' ? inputData.join(' ') : inputData;
+          console.log('result', result);
+          resolve(result);
+        }
+        else
+        console.log('请输入'+max+'个数据');
+      }
     });
   }) 
 }
 
-export const read = async () => {
+export const read = async (max,type) => {
   if (!options.ioFlag) return ;
   hint.warn('请输入数据: ')
-  return await readWrap();
+  return await readWrap(max,type);
 }
 
 export const print = (msg) => {
