@@ -28,7 +28,6 @@ const readWrap = (max,type) => {
         inputData = checkout(inputData);
         if(inputData.length == max){
           var result = typeof type == 'undefined' ? inputData.join(' ') : inputData;
-          console.log('result', result);
           resolve(result);
         }
         else
